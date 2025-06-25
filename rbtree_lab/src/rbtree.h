@@ -7,14 +7,15 @@ typedef enum { RBTREE_RED, RBTREE_BLACK } color_t;
 
 typedef int key_t;
 
+// rb 트리의 노드들
 typedef struct node_t {
-  color_t color;
-  key_t key;
-  struct node_t *parent, *left, *right;
+  color_t color; // color 타입
+  key_t key; // 키 (입력값 value)
+  struct node_t *parent, *left, *right; // 부모,왼쪽,오른쪽 노드 포인터
 } node_t;
 
 typedef struct {
-  node_t *root;
+  node_t *root; // rbtree 루트를 가리킴
   node_t *nil;  // for sentinel
 } rbtree;
 

@@ -51,6 +51,7 @@ void test_find_single(const key_t key, const key_t wrong_key)
   assert(q == p);
 
   q = rbtree_find(t, wrong_key);
+  printf("%p" , q);
   assert(q == NULL);
 
   delete_rbtree(t);
